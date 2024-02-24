@@ -1,0 +1,55 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+header {
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  font-size: 2.5rem;
+  gap: 3.3rem;
+  font-family: 'Play', sans-serif;
+  color: silver;
+  padding-right: 2rem;
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header li:hover {
+  color: white;
+}
+
+#welcome-section {
+  height: 100vh;
+  background: linear-gradient(black, rgb(9, 0, 49), rgb(0, 0, 85));
+}
+
+@media only screen and (max-width: 395px) {
+  header {
+    justify-content: center;
+  }
+
+  .nav-list {
+    padding: 0 1rem;
+    font-size: 6.2vw;
+  }
+}
