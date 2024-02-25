@@ -14,13 +14,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbit&family=Orbitron:wght@400..900&family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   </head>
   <body>
     <header>
-      <ul class="nav-list">
-        <li><a href="">About</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Contact</a></li>
+      <ul id="navbar" class="nav-list">
+        <li><a href="#welcome-section">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
     <main>
@@ -58,10 +61,23 @@
             <p>Techinal Documentation</p>
           </a>
         </div>
-        <a href="https://github.com/Intumor" target="_blank">
+        <a id="profile-link" href="https://github.com/Intumor" target="_blank">
           <button>See More</button>
         </a>
       </section>
+      <section id="contact" class="contact-section">
+        <div class="contact-info-box">
+          <h2 class="contact-header">If you'd like to contact me, just click one of these</h2>
+          <div class="contact-links">
+            <a href="https://www.facebook.com/profile.php?id=61551932804785" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.whatsapp.com/" target="_blank"><i class="fab fa-brands fa-whatsapp"></i></a>
+            <a href="https://github.com/Intumor" target="_blank"><i class="fab fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <p class="footer-text">**This portfolio was made as one of the certification projects on FreeCodeCamp.</p>
+      </footer>
     </main>
   </body>
 </html>

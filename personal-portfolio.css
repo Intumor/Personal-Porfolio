@@ -1,3 +1,9 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
 *, ::before, ::after {
   margin: 0;
   padding: 0;
@@ -17,8 +23,13 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+header:hover {
+  background-color: rgba(0, 0, 0, 0.98);
 }
 
 .nav-list {
@@ -82,6 +93,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2rem;
 }
 
 h2 {
@@ -97,6 +109,14 @@ h2 {
   gap: 3rem;
   margin: 3rem auto;
 }
+.project-tile {
+  transition: all 0.4s;
+}
+
+.project-tile:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.15);
+}
 
 img {
   width: 400px;
@@ -104,7 +124,7 @@ img {
   display: block;
 }
 
-p:not(.ocupation) {
+p:not(.ocupation, .footer-text) {
   color: black;
   background-color: rgb(215, 215, 250);
   text-align: center;
@@ -136,6 +156,73 @@ button:active {
   background-color: rgb(164, 165, 231);
 }
 
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(221, 221, 253);
+  padding-bottom: 9rem;
+}
+
+.contact-info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-header {
+  padding-bottom: 3rem;
+}
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab {
+  font-size: 5rem;
+  padding: 0.3rem 1.3rem;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+}
+
+.fa-facebook-f {
+  color: rgb(51, 51, 207);
+  border-radius: 50%;
+  border: 1px solid rgb(0, 0, 46);
+}
+
+.fa-whatsapp {
+  color: rgb(64, 180, 64);
+  padding: 0.5rem 1.1rem 0.5rem 2.5rem;
+  font-size: 5.9rem;
+}
+
+.fa-github {
+  font-size: 5.7rem;
+  color: black;
+}
+
+footer {
+  border-top: 1px solid black;
+  background-color: rgb(204, 204, 204);
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text {
+  font-size: 2rem;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+
 @media only screen and (max-width: 1265px) {
   .project-grid {
     grid-template-columns: 1fr 1fr;
@@ -149,6 +236,31 @@ button:active {
 
   h2 {
     font-size: 4rem;
+  }
+
+  button {
+    font-size: 1.8rem;
+    padding: 0.5rem 1rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid white;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  header {
+    background-color: black;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .developer-name {
+    font-size: 5rem;
+  }
+
+  .ocupation {
+    font-size: 3rem;
   }
 }
 
@@ -172,16 +284,6 @@ button:active {
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .developer-name {
-    font-size: 5rem;
-  }
-
-  .ocupation {
-    font-size: 3rem;
-  }
-}
-
 @media only screen and (max-width: 395px) {
   header {
     justify-content: center;
@@ -198,5 +300,19 @@ button:active {
 
   .ocupation {
     font-size: 2rem;
+  }
+
+  .fab {
+    font-size: 3rem;
+    padding: 0.2rem 0.8rem;
+  }
+
+  .fa-whatsapp {
+    font-size: 4rem;
+    padding: 0.5rem 1.1rem 0.5rem 2.5rem;
+  }
+  
+  .fa-github {
+    font-size: 3.6rem;
   }
 }
